@@ -1,15 +1,14 @@
-#OR GATE USING NEURAL NETWORK
-# OR GATE USING NEURAL NETWORK
+# AND GATE USING NEURAL NETWORK
 
 import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
-# Define the OR gate input and output
+# Define the AND gate input and output
 # Input: [A, B]
-# Output: A OR B
+# Output: A AND B
 inputs = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
-outputs = np.array([[0], [1], [1], [1]])
+outputs = np.array([[0], [0], [0], [1]])
 
 # Build the neural network model
 model = Sequential()
@@ -26,9 +25,7 @@ model.fit(inputs, outputs, epochs=1000, verbose=0)
 loss, accuracy = model.evaluate(inputs, outputs)
 print(f'Loss: {loss}, Accuracy: {accuracy}')
 
-new_inputs= np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
-
 # Make predictions
-predictions = model.predict(new_inputs).round()
+predictions = model.predict(inputs)
 print('Predictions:')
 print(predictions)
