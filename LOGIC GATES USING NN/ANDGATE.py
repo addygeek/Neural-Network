@@ -26,6 +26,6 @@ loss, accuracy = model.evaluate(inputs, outputs)
 print(f'Loss: {loss}, Accuracy: {accuracy}')
 
 # Make predictions
-predictions = model.predict(inputs)
+predictions = model.predict(inputs.round())
 print('Predictions:')
 print(predictions)
