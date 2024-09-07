@@ -28,4 +28,4 @@ print(f'Loss: {loss}, Accuracy: {accuracy}')
 # Make predictions
 predictions = model.predict(inputs)
 print('Predictions:')
-print(predictions)
+print(predictions.round())
