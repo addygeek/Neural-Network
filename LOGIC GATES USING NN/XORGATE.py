@@ -25,7 +25,7 @@ model.fit(inputs, outputs, epochs=1000, verbose=0)
 loss, accuracy = model.evaluate(inputs, outputs)
 print(f'Loss: {loss}, Accuracy: {accuracy}')
 
-# Make predictions
+# Make predictionsss
 predictions = model.predict(inputs)
 print('Predictions:')
 print(predictions.round())
