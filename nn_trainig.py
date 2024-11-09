@@ -32,5 +32,6 @@ model.compile(optimizer=Adam(learning_rate=0.001), loss='binary_crossentropy', m
 model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
 # Evaluate the model
+# gen alpha
 loss, accuracy = model.evaluate(X_test, y_test)
 print(f'Test Accuracy: {accuracy:.4f}')
